@@ -93,4 +93,5 @@ tidy_data <- X[,lapply(X,mean),by=.(subject,activity)]
 tidy_data[,c(564,565):=NULL]
 
 
-fwrite(X,"tidy_data.csv")
+#fwrite(tidy_data,"tidy_data.csv")
+write.table(tidy_data,"tidy_data.txt", row.name=FALSE)
